@@ -11,7 +11,7 @@ def env_list(name: str, default: str = "") -> list[str]:
 
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "dev-only-insecure-key-change-me")
 DEBUG = os.getenv("DJANGO_DEBUG", "true").lower() == "true"
-ALLOWED_HOSTS = env_list("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1,.onrender.com")
+ALLOWED_HOSTS = env_list("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1,.onrender.com,.vercel.app")
 
 INSTALLED_APPS = [
     "django.contrib.contenttypes",
